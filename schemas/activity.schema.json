@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://desert-tech-festival.org/schemas/activity.json",
+  "title": "Activity",
+  "description": "Schema for user activity records",
+  "type": "object",
+  "required": ["user_id", "activity_type", "occurred_at", "activity_data"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique identifier for the activity"
+    },
+    "user_id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "ID of the user who performed the activity"
+    },
+    "activity_type": {
+      "type": "string",
+      "enum": ["code_commit", "location_checkin", "iot_sensor_reading", "workshop_attendance", "habit_checkin", "peer_review"],
+      "description": "Type of activity"
+    },
+    "occurred_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the activity occurred (ISO 8601)"
+    },
+    "activity_data": {
+      "type": "object",
+      "description": "Activity-specific data (flexible JSON structure)",
+      "additionalProperties": true
+    },
+    "verification_status": {
+      "type": "string",
+      "enum": ["pending", "verified", "failed", "appealed"],
+      "default": "pending",
+      "description": "Current verification status"
+    },
+    "verification_method": {
+      "type": "string",
+      "description": "Method used for verification"
+    },
+    "verified_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When verification completed"
+    },
+    "verification_metadata": {
+      "type": "object",
+      "description": "Additional verification details",
+      "additionalProperties": true
+    }
+  }
+}

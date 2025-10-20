@@ -1,0 +1,67 @@
+[
+  {
+    "id": "770e8400-e29b-41d4-a716-446655440001",
+    "name": "Hello Blinky",
+    "description": "Complete your first LED control challenge",
+    "category_id": "880e8400-e29b-41d4-a716-446655440001",
+    "requirements": [
+      {
+        "activity_type": "code_commit",
+        "count": 1,
+        "conditions": {
+          "repo_contains": "challenge-1",
+          "test_results.passed": true
+        }
+      }
+    ],
+    "verification_logic_ref": "verify-code-commit",
+    "reward_data": {
+      "badge_url": "/badges/hello-blinky.png",
+      "points": 10
+    },
+    "visibility": "public"
+  },
+  {
+    "id": "770e8400-e29b-41d4-a716-446655440002",
+    "name": "First Step",
+    "description": "Attend your first wellness meeting",
+    "category_id": "880e8400-e29b-41d4-a716-446655440002",
+    "requirements": [
+      {
+        "activity_type": "location_checkin",
+        "count": 1,
+        "conditions": {
+          "verified_geolocation": true
+        }
+      }
+    ],
+    "verification_logic_ref": "verify-geolocation",
+    "reward_data": {
+      "badge_url": "/badges/first-step.png",
+      "points": 5
+    },
+    "visibility": "private"
+  },
+  {
+    "id": "770e8400-e29b-41d4-a716-446655440003",
+    "name": "Green Thumb",
+    "description": "Monitor your garden for 30 consecutive days",
+    "category_id": "880e8400-e29b-41d4-a716-446655440003",
+    "requirements": [
+      {
+        "activity_type": "iot_sensor_reading",
+        "consecutive_days": 30,
+        "conditions": {
+          "sensor_types": ["temperature", "humidity", "soil_moisture"]
+        }
+      }
+    ],
+    "verification_logic_ref": "verify-iot-sensor",
+    "reward_data": {
+      "badge_url": "/badges/green-thumb.png",
+      "points": 50,
+      "certificate": true
+    },
+    "visibility": "public"
+  }
+]

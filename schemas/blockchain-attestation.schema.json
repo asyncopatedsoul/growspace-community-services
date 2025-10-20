@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://desert-tech-festival.org/schemas/blockchain-attestation.json",
+  "title": "BlockchainAttestation",
+  "description": "Schema for blockchain attestation data",
+  "type": "object",
+  "required": ["achievement_id", "user_pseudonym", "granted_at", "evidence_hash"],
+  "properties": {
+    "achievement_id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Achievement that was granted"
+    },
+    "user_pseudonym": {
+      "type": "string",
+      "description": "Pseudonymous user identifier (not real user_id for privacy)"
+    },
+    "granted_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When achievement was granted"
+    },
+    "evidence_hash": {
+      "type": "string",
+      "pattern": "^0x[a-fA-F0-9]{64}$",
+      "description": "SHA-256 hash of evidence data"
+    },
+    "ipfs_cid": {
+      "type": "string",
+      "description": "IPFS Content Identifier for full evidence"
+    },
+    "schema_version": {
+      "type": "string",
+      "default": "1.0.0",
+      "description": "Attestation schema version"
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "achievement_name": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string"
+        },
+        "issuer": {
+          "type": "string",
+          "description": "Organization or system that issued"
+        }
+      },
+      "additionalProperties": true
+    }
+  }
+}

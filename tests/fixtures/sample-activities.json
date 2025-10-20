@@ -1,0 +1,48 @@
+[
+  {
+    "id": "660e8400-e29b-41d4-a716-446655440001",
+    "user_id": "550e8400-e29b-41d4-a716-446655440001",
+    "activity_type": "code_commit",
+    "occurred_at": "2024-01-15T10:30:00Z",
+    "activity_data": {
+      "repo_url": "https://github.com/alice-codes/robot-project",
+      "commit_sha": "abc123def456",
+      "test_results": {
+        "passed": true,
+        "total_tests": 10,
+        "passed_tests": 10,
+        "coverage": 85.5
+      }
+    },
+    "verification_status": "verified",
+    "verification_method": "github_webhook"
+  },
+  {
+    "id": "660e8400-e29b-41d4-a716-446655440002",
+    "user_id": "550e8400-e29b-41d4-a716-446655440001",
+    "activity_type": "location_checkin",
+    "occurred_at": "2024-01-16T18:00:00Z",
+    "activity_data": {
+      "latitude": 34.0522,
+      "longitude": -118.2437,
+      "accuracy": 15,
+      "event_id": "wellness-meeting-001"
+    },
+    "verification_status": "verified",
+    "verification_method": "geolocation"
+  },
+  {
+    "id": "660e8400-e29b-41d4-a716-446655440003",
+    "user_id": "550e8400-e29b-41d4-a716-446655440001",
+    "activity_type": "iot_sensor_reading",
+    "occurred_at": "2024-01-17T08:00:00Z",
+    "activity_data": {
+      "device_id": "garden-sensor-001",
+      "sensor_type": "temperature",
+      "reading_value": 22.5,
+      "unit": "celsius"
+    },
+    "verification_status": "verified",
+    "verification_method": "iot_webhook"
+  }
+]

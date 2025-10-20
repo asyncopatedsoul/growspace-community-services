@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://desert-tech-festival.org/schemas/verification-rule.json",
+  "title": "VerificationRule",
+  "description": "Schema for verification rule definitions",
+  "type": "object",
+  "required": ["name", "activity_type_id", "logic_function", "required_evidence", "success_criteria"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 100
+    },
+    "activity_type_id": {
+      "type": "string",
+      "description": "Activity type this rule verifies"
+    },
+    "logic_function": {
+      "type": "string",
+      "description": "Name of Edge Function to call"
+    },
+    "required_evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Required fields in activity_data"
+    },
+    "success_criteria": {
+      "type": "object",
+      "description": "Conditions for successful verification",
+      "additionalProperties": true
+    },
+    "failure_conditions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "field": {
+            "type": "string"
+          },
+          "condition": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "authority": {
+      "type": "string",
+      "enum": ["automated", "peer_review", "instructor_review", "admin_review"],
+      "default": "automated"
+    }
+  }
+}

@@ -137,3 +137,35 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# Deno
+.deno_cache/
+deno.lock
+
+# Supabase
+supabase/.temp/
+supabase/docker/
+supabase/.branches/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build outputs
+build/
+.build/
+dist/
+
+# Secret keys
+*.pem
+*.key
+!.env.example
+
+# Test outputs
+.nyc_output/

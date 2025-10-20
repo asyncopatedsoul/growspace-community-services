@@ -1,0 +1,42 @@
+[
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440001",
+    "username": "alice_coder",
+    "display_name": "Alice Johnson",
+    "bio": "Full-stack developer passionate about open source",
+    "role": "user",
+    "notification_preferences": {
+      "email_enabled": true,
+      "achievement_notifications": true,
+      "milestone_reminders": true
+    },
+    "integrations": {
+      "github_username": "alice-codes"
+    }
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440002",
+    "username": "bob_instructor",
+    "display_name": "Bob Martinez",
+    "bio": "Robotics instructor and maker",
+    "role": "instructor",
+    "notification_preferences": {
+      "email_enabled": true,
+      "achievement_notifications": true
+    },
+    "integrations": {
+      "github_username": "bob-teaches"
+    }
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440003",
+    "username": "carol_admin",
+    "display_name": "Carol Smith",
+    "bio": "System administrator",
+    "role": "admin",
+    "notification_preferences": {
+      "email_enabled": true,
+      "achievement_notifications": false
+    }
+  }
+]
